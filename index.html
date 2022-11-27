@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aes-js/3.1.2/index.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+
+    <!-- Bootstrap script and css  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap script and css  -->
+
+    <title>Encrypted data</title>
+</head>
+<body>
+    
+    <div class="container mt-5">
+
+
+        <div class="row mt-3 mb-3">
+
+            <div class="col-6">
+
+                <label for="">Key Value</label>
+                <input id="key" placeholder="your key" class="form-control"  maxlength="16"/>
+
+            </div>
+
+            <div class="col-6">
+
+                <label for="">IV Value</label>
+                <input id="iv" placeholder="your IV" class="form-control" maxlength="16"/>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-6">
+
+                <label for="">Your data</label>
+                <input id="your_data" placeholder="your data" class="form-control" />
+
+            </div>
+
+            <div class="mt-3">
+
+                <button class="btn btn-success" id="Convert">Convert</button>
+
+                <div class="mt-3">
+                    <result-data class="text-success"></result-data>
+                </div>
+
+            </div>
+
+        </div>        
+
+    </div>
+
+
+</body>
+</html>
+
+
+<script type="text/javascript">
+
+    $("#Convert").click(function (e) { 
+        e.preventDefault();
+
+        sifrele();
+        
+    });
+
+    function sifrele() {
+
+
+        var your_data = $("#your_data").val();
+
+        var _key = $("#key").val(), _iv = $("#iv").val();;
+
+        var key = CryptoJS.enc.Utf8.parse(_key);
+        var iv  = CryptoJS.enc.Utf8.parse(_iv);
+
+        var sifrelenmisData = CryptoJS.AES.encrypt(
+            CryptoJS.enc.Utf8.parse(your_data),
+            key,
+            {
+                keySize: 128 / 8,
+                iv: iv,
+                mode: CryptoJS.mode.CBC,
+                padding: CryptoJS.pad.Pkcs7
+            }            
+            
+        );
+
+        $("result-data").html("your data result : " + sifrelenmisData);
+        console.log("Data : " + your_data + "\r\n\nEncrypted Data : " + sifrelenmisData + "\r\n\n");
+    }
+
+
+</script>

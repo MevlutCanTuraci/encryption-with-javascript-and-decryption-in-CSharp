@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\Projects\github\encryption-with-javascript-and-decryption-in-CSharp\DataDecryptFromJavascriptData\DataDecryptFromJavascriptData\bin\publish\DataDecryptFromJavascriptData.pdb
+C:\Users\User\Desktop\Projects\github\encryption-with-javascript-and-decryption-in-CSharp\DataDecryptFromJavascriptData\DataDecryptFromJavascriptData\bin\publish\D3DCompiler_47_cor3.dll
+C:\Users\User\Desktop\Projects\github\encryption-with-javascript-and-decryption-in-CSharp\DataDecryptFromJavascriptData\DataDecryptFromJavascriptData\bin\publish\PenImc_cor3.dll
+C:\Users\User\Desktop\Projects\github\encryption-with-javascript-and-decryption-in-CSharp\DataDecryptFromJavascriptData\DataDecryptFromJavascriptData\bin\publish\PresentationNative_cor3.dll
+C:\Users\User\Desktop\Projects\github\encryption-with-javascript-and-decryption-in-CSharp\DataDecryptFromJavascriptData\DataDecryptFromJavascriptData\bin\publish\vcruntime140_cor3.dll
+C:\Users\User\Desktop\Projects\github\encryption-with-javascript-and-decryption-in-CSharp\DataDecryptFromJavascriptData\DataDecryptFromJavascriptData\bin\publish\wpfgfx_cor3.dll
+C:\Users\User\Desktop\Projects\github\encryption-with-javascript-and-decryption-in-CSharp\DataDecryptFromJavascriptData\DataDecryptFromJavascriptData\bin\publish\DataDecryptFromJavascriptData.exe
